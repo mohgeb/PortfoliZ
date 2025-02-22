@@ -28,7 +28,7 @@ const activities = [
     priority: "medium",
   },
   {
-    name: "Landing a Research Assistant Position with Dr. Sid O'Brayant",
+    name: "Landing a Research Assistant Position with Dr. Sid O'Bryant",
     description: "Trying to land a Job/Research/Internship in the fields of Analytics, Biopharmaceutical, Data, or Mathematics.",
     hours: 112,
     progress: 10,
