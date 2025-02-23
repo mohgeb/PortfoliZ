@@ -1,6 +1,6 @@
-# My Next.js D3.js React Project
+# My PotfoliZ  Project
 
-This is a sample project built with Next.js, D3.js, and React.js. It demonstrates how to create a web application that visualizes data using D3.js within a Next.js framework.
+This project is built with Next.js, D3.js, and React.js. It demonstrates how to create a web application that visualizes data using D3.js within a Next.js framework.
 
 ## Table of Contents
 
@@ -44,4 +44,4 @@ To get a local copy of this project up and running, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/username/repo-name.git
+   git clone https://github.com/mohgeb/PortfoliZ.git
