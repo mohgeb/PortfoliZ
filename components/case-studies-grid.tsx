@@ -34,7 +34,7 @@ const caseStudies = [
       "I approached this by designing a dashboard-style interface with multiple sections to organize different aspects of my professional profile. I focused on creating a clean UI with interactive elements to improve user engagement.",
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn/UI", "React"],
     codeSnippet: `// Dynamic tab component implementation
-const TabContent = ({ activeTab }: { activeTab: string }) => {
+const TabContent = ({ activeTab }) => {
   switch (activeTab) {
     case "technical":
       return <TechnicalSkills />;
@@ -71,11 +71,12 @@ const TabContent = ({ activeTab }: { activeTab: string }) => {
     id: "finance-sms-pipeline",
     title: "Finance SMS ETL",
     role: "Full-Stack Data Pipeline Developer",
-    problem: "Managing personal finances based on Vodafone Cash SMS messages was manually time-consuming and error-prone. The user wanted a monthly financial report and dashboard automatically generated from Google Messages/Vodafone Cash transactions, without relying on manual bookkeeping.",
+    problem:
+      "Managing personal finances based on Vodafone Cash SMS messages was manually time-consuming and error-prone. The user wanted a monthly financial report and dashboard automatically generated from Google Messages/Vodafone Cash transactions, without relying on manual bookkeeping.",
     process:
       "I exported the SMS messages from Google Messages in XML format, then used Python (on Google Colab) to parse, clean, and categorize the data using xml, pandas, and regex. I transformed the messages into a structured DataFrame with monthly groupings, computed totals, and identified financial behaviors. Finally, I generated an .xlsx report and embedded a visual dashboard with line charts using openpyxl for manual review and trend analysis.",
-    stack: ["Python", "Google Messages XML Backup", "Google Colab", "Pandas", "Openxyl"],
-    codeSnippet:`import xml.etree.ElementTree as ET
+    stack: ["Python", "Google Messages XML Backup", "Google Colab", "Pandas", "Openpyxl"],
+    codeSnippet: `import xml.etree.ElementTree as ET
 import pandas as pd
 
 tree = ET.parse('sms_backup.xml')
@@ -90,13 +91,11 @@ for sms in root.findall('sms'):
         })
 
 df = pd.DataFrame(msgs)
-df['date'] = pd.to_datetime(df['date'], unit='ms')
-`, 
+df['date'] = pd.to_datetime(df['date'], unit='ms')`,
     challenges:
-      "Extracting structured financial information from unstructured Vodafone Cash SMS messages required building custom regex patterns to identify transaction types and amounts. Managing various inconsistent message formats and timezones was difficult, especially when categorizing ATM transactions, deposits, and card creation. Ensuring accurate month-wise aggregation and eliminating duplicate messages also added complexity to the pipeline.
-
-",
-    results: "The pipeline successfully automated monthly financial reporting from SMS, saving several hours of manual work. It revealed key insights such as peak spending months, recurring patterns in ATM usage, and monthly net savings. The result was a professional, Excel-based dashboard that could be reused and updated every month with zero code changes.",
+      "Extracting structured financial information from unstructured Vodafone Cash SMS messages required building custom regex patterns to identify transaction types and amounts. Managing various inconsistent message formats and timezones was difficult, especially when categorizing ATM transactions, deposits, and card creation. Ensuring accurate month-wise aggregation and eliminating duplicate messages also added complexity to the pipeline.",
+    results:
+      "The pipeline successfully automated monthly financial reporting from SMS, saving several hours of manual work. It revealed key insights such as peak spending months, recurring patterns in ATM usage, and monthly net savings. The result was a professional, Excel-based dashboard that could be reused and updated every month with zero code changes.",
     demo: "https://ai-generator.example.com",
   },
 ]
@@ -117,7 +116,7 @@ export function CaseStudiesGrid() {
         return "bg-gradient-to-br from-blue-900 to-purple-900"
       case "ecommerce-platform":
         return "bg-gradient-to-br from-green-900 to-teal-900"
-      case "ai-content-generator":
+      case "finance-sms-pipeline":
         return "bg-gradient-to-br from-red-900 to-orange-900"
       default:
         return "bg-gradient-to-br from-gray-800 to-gray-900"
