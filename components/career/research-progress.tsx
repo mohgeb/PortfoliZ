@@ -6,10 +6,16 @@ import { CheckCircle2, Circle } from "lucide-react"
 
 const researchData = {
   overallProgress: 25,
-  completedSteps: ["Literature review on genetic markers", "Data Acquisition" 
-    
+  completedSteps: ["Literature review on genetic markers", "Data Acquisition"],
+  nextSteps: [
+    "Genomic Annotation",
+    "Pathway Analysis",
+    "Functional Annotation",
+    "Analysis & Report",
+    "Draft research paper",
+    "Peer review submission",
+    "Final revisions",
   ],
-  nextSteps: ["Genomic Annotation", "Pathway Analysis", "Functional Annotation", "Analysis & Report", "Draft research paper", "Peer review submission", "Final revisions"],
 }
 
 export function ResearchProgress() {
@@ -56,4 +62,3 @@ export function ResearchProgress() {
     </Card>
   )
 }
-

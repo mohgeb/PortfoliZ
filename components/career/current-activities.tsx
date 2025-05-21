@@ -19,7 +19,8 @@ const activities = [
   },
   {
     name: "Analyzing Demographic Data of Alzheimer's Disease Patients",
-    description: "Data Analysis Project Proposal: Analyzing Demographic Data of Alzheimer's Disease Patients to Identify Common Lifestyle Traits",
+    description:
+      "Data Analysis Project Proposal: Analyzing Demographic Data of Alzheimer's Disease Patients to Identify Common Lifestyle Traits",
     hours: 0,
     progress: 0,
     icon: Database,
@@ -29,7 +30,8 @@ const activities = [
   },
   {
     name: "Landing a Research Assistant Position with Dr. Sid O'Bryant",
-    description: "Trying to land a Job/Research/Internship in the fields of Analytics, Biopharmaceutical, Data, or Mathematics.",
+    description:
+      "Trying to land a Job/Research/Internship in the fields of Analytics, Biopharmaceutical, Data, or Mathematics.",
     hours: 112,
     progress: 10,
     icon: FileText,
@@ -39,7 +41,7 @@ const activities = [
   },
   {
     name: "Interactive Portfolio Dashboard",
-    description: "Building an Interactive Portfolio to showcase my professional experiencec in an inconventional way",
+    description: "Building an Interactive Portfolio to showcase my professional experiencec in an unconventional way",
     hours: 112,
     progress: 80,
     icon: GitBranch,
@@ -116,4 +118,3 @@ export function CurrentActivities() {
     </Card>
   )
 }
-

@@ -27,7 +27,6 @@ const technicalSkills = [
   { name: "Data Extraction", level: 88 },
   { name: "Data Visualization", level: 92 },
   { name: "Statistical Analysis", level: 89 },
-  
 ]
 
 const softSkills = [
@@ -245,4 +244,3 @@ export default function SkillsAnalytics() {
     </div>
   )
 }
-

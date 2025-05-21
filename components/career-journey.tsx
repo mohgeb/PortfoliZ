@@ -1,6 +1,4 @@
 "use client"
-
-import React from "react"
 import { GeoExperience } from "./career/geo-experience"
 import { ResearchProgress } from "./career/research-progress"
 import { MilestoneHeatmap } from "./career/milestone-heatmap"
@@ -20,4 +18,3 @@ export default function CareerJourney() {
     </div>
   )
 }
-

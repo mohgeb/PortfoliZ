@@ -1,6 +1,4 @@
 "use client"
-
-import React from "react"
 import { BookRecommendations } from "./life/book-recommendations"
 import { ProfessionalCards } from "./life/professional-cards"
 import { HappinessAchievement } from "./life/happiness-achievement"
@@ -18,7 +16,7 @@ const activityData = [
     title: "Research Papers",
     icon: ScrollText,
     value: "85",
-    description: "Papers published & reviewed",
+    description: "Papers read & studfied",
   },
   {
     title: "Coding Hours",
@@ -65,4 +63,3 @@ export default function LifeDashboard() {
     </div>
   )
 }
-

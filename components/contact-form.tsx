@@ -1,5 +1,7 @@
 "use client"
 
+import type React from "react"
+
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import {
@@ -51,12 +53,12 @@ export function ContactForm() {
       <DialogTrigger asChild>
         <Button variant="outline">
           <Mail className="mr-2 h-4 w-4" />
-          Contact Me
+          Hire Me
         </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Contact Me</DialogTitle>
+          <DialogTitle>Hire Me</DialogTitle>
           <DialogDescription>Send me a message and I&apos;ll get back to you as soon as possible.</DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="grid gap-4 py-4">
@@ -82,4 +84,3 @@ export function ContactForm() {
     </Dialog>
   )
 }
-

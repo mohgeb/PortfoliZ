@@ -10,7 +10,8 @@ import { ExternalLink, Github, Linkedin, Mail, ChevronLeft, ChevronRight } from 
 const professionals = [
   {
     name: "Travis Thompson, Ph.D.",
-    avatar: "https://media.licdn.com/dms/image/v2/C4D03AQE6Jm7RWt0CMQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516851205579?e=1743638400&v=beta&t=Y_623YK5HPU2XJXWrNqTDayHoj26CD-6ktVc_9mzbEw",
+    avatar:
+      "https://media.licdn.com/dms/image/v2/C4D03AQE6Jm7RWt0CMQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516851205579?e=1743638400&v=beta&t=Y_623YK5HPU2XJXWrNqTDayHoj26CD-6ktVc_9mzbEw",
     role: "Mathematical Models and Neurodegenerative Disorders",
     institution: "Texas Tech University",
     impact: "Pioneering work in mathematical modeling of brain disorders",
@@ -23,7 +24,8 @@ const professionals = [
   },
   {
     name: "Sid O'Bryant, Ph.D.",
-    avatar: "https://media.licdn.com/dms/image/v2/D5603AQGytBCzmlKRdg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1727363543493?e=1743638400&v=beta&t=bpAqiMTG5DjCjl3aStCJ8IQj_A5Un3xia_bx8Y7uKLI",
+    avatar:
+      "https://media.licdn.com/dms/image/v2/D5603AQGytBCzmlKRdg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1727363543493?e=1743638400&v=beta&t=bpAqiMTG5DjCjl3aStCJ8IQj_A5Un3xia_bx8Y7uKLI",
     role: "Alzheimer's Disease Research",
     institution: "University of North Texas",
     impact: "Revolutionary research in early Alzheimer's detection",
@@ -35,7 +37,8 @@ const professionals = [
   },
   {
     name: "Charles Severance, Ph.D.",
-    avatar: "https://media.licdn.com/dms/image/v2/C4E03AQHHeSP_-lW5gQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1588331332862?e=1743638400&v=beta&t=HIdSis9r-sxdHfvs1QI1IRmGphvOEllR2C-Mxy-s0fU",
+    avatar:
+      "https://media.licdn.com/dms/image/v2/C4E03AQHHeSP_-lW5gQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1588331332862?e=1743638400&v=beta&t=HIdSis9r-sxdHfvs1QI1IRmGphvOEllR2C-Mxy-s0fU",
     role: "Computer Engineering and Data Science",
     institution: "University of Michigan",
     impact: "Innovative approaches to teaching programming and data analysis",
@@ -47,7 +50,8 @@ const professionals = [
   },
   {
     name: "Gerald Juhnke, Ed.D.",
-    avatar: "https://media.licdn.com/dms/image/v2/D5603AQGCuu6jcMhw_A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1725198624080?e=1743638400&v=beta&t=wDCOD9OtkGRQ8HU3A5f8xAa6h8_Dj1FwiN4pjvc6ZRE",
+    avatar:
+      "https://media.licdn.com/dms/image/v2/D5603AQGCuu6jcMhw_A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1725198624080?e=1743638400&v=beta&t=wDCOD9OtkGRQ8HU3A5f8xAa6h8_Dj1FwiN4pjvc6ZRE",
     role: "Clinical Psychology",
     institution: "University of Texas",
     impact: "Groundbreaking work in psychological assessment methods",
@@ -71,7 +75,8 @@ const professionals = [
   },
   {
     name: "Mahmoud Attia, BEng",
-    avatar: "https://media.licdn.com/dms/image/v2/C5603AQEfxCYNG6wPXw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1567083753438?e=1743638400&v=beta&t=PJDc5Gds7um_Ery3o4JlBNMfB438lMw5VdIEK5965_A",
+    avatar:
+      "https://media.licdn.com/dms/image/v2/C5603AQEfxCYNG6wPXw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1567083753438?e=1743638400&v=beta&t=PJDc5Gds7um_Ery3o4JlBNMfB438lMw5VdIEK5965_A",
     role: "Software Engineer and Mentor",
     institution: "The German University in Cairo",
     impact: "Contributions to software development education",
@@ -217,4 +222,3 @@ export function ProfessionalCards() {
     </Card>
   )
 }
-

@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import { SearchIcon } from "lucide-react"
+import { useRouter } from "next/navigation"
 
 import {
   CommandDialog,
@@ -13,8 +14,18 @@ import {
 } from "@/components/ui/command"
 import { Button } from "@/components/ui/button"
 
+const searchItems = [
+  { name: "Career Journey", url: "/career" },
+  { name: "Skills & Analytics", url: "/skills" },
+  { name: "Data Resume", url: "/resume" },
+  { name: "Life Dashboard", url: "/life" },
+  { name: "Projects", url: "/resume" },
+  { name: "Contact", url: "/" },
+]
+
 export function Search() {
   const [open, setOpen] = React.useState(false)
+  const router = useRouter()
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
@@ -27,11 +38,16 @@ export function Search() {
     return () => document.removeEventListener("keydown", down)
   }, [])
 
+  const runCommand = React.useCallback((command: () => unknown) => {
+    setOpen(false)
+    command()
+  }, [])
+
   return (
     <>
       <Button
         variant="outline"
-        className="relative h-9 w-9 p-0 xl:h-10 xl:w-60 xl:justify-start xl:px-3 xl:py-2"
+        className="relative h-9 w-full max-w-[200px] p-0 xl:h-10 xl:max-w-[240px] xl:justify-start xl:px-3 xl:py-2"
         onClick={() => setOpen(true)}
       >
         <SearchIcon className="h-4 w-4 xl:mr-2" />
@@ -45,14 +61,19 @@ export function Search() {
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
           <CommandGroup heading="Suggestions">
-            <CommandItem>Career Journey</CommandItem>
-            <CommandItem>Skills & Analytics</CommandItem>
-            <CommandItem>Data Resume</CommandItem>
-            <CommandItem>Life Dashboard</CommandItem>
+            {searchItems.map((item) => (
+              <CommandItem
+                key={item.name}
+                onSelect={() => {
+                  runCommand(() => router.push(item.url))
+                }}
+              >
+                {item.name}
+              </CommandItem>
+            ))}
           </CommandGroup>
         </CommandList>
       </CommandDialog>
     </>
   )
 }
-

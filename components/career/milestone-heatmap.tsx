@@ -228,15 +228,13 @@ export function MilestoneHeatmap() {
       })
       .attr("y", -5)
       .attr("text-anchor", "start")
-      .text((d) => d)
-      .attr("font-size", "11px")
+      .text((d) => d.slice(0, 3)) // Show only first 3 letters of month name
+      .attr("font-size", "10px")
       .attr("font-weight", "500")
       .attr("fill", "currentColor")
       .attr("cursor", "pointer")
       .style("user-select", "none")
-      .attr("opacity", (d, i) => 
-        selectedMonth === "all" || selectedMonth === i.toString() ? 1 : 0.5
-      )
+      .attr("opacity", (d, i) => (selectedMonth === "all" || selectedMonth === i.toString() ? 1 : 0.5))
       .on("click", (event, d) => {
         const monthIndex = months.indexOf(d)
         setSelectedMonth(selectedMonth === monthIndex.toString() ? "all" : monthIndex.toString())
@@ -366,4 +364,3 @@ export function MilestoneHeatmap() {
     </Card>
   )
 }
-

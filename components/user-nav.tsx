@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Github, Linkedin, Mail, MapPin, ScrollText, User2 } from "lucide-react"
+import { Github, Linkedin, Mail, MapPin, ScrollText } from "lucide-react"
 
 import {
   DropdownMenu,
@@ -23,7 +23,10 @@ export function UserNav() {
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" className="relative h-10 w-10 rounded-full">
           <Avatar className="h-10 w-10">
-            <AvatarImage src="https://media.licdn.com/dms/image/v2/D4D03AQEXXAqcTFPGig/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1731792481636?e=1743638400&v=beta&t=z6-mBeVpWx5A7yxI0Cm7IHzkb2qXW6ra_BV4TKJ36AU" alt="Mohamed Gebril" />
+            <AvatarImage
+              src="https://media.licdn.com/dms/image/v2/D4D03AQEXXAqcTFPGig/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1731792481636?e=1743638400&v=beta&t=z6-mBeVpWx5A7yxI0Cm7IHzkb2qXW6ra_BV4TKJ36AU"
+              alt="Mohamed Gebril"
+            />
             <AvatarFallback>MH</AvatarFallback>
           </Avatar>
         </Button>
@@ -71,29 +74,33 @@ export function UserNav() {
         <DropdownMenuSeparator />
         <DropdownMenuLabel>Connect</DropdownMenuLabel>
         <DropdownMenuGroup className="flex p-2">
-            <a className="w-full" href="https://github.com/mohgeb" target="_blank" rel="noopener noreferrer">
-              <Button variant="ghost" size="icon" className="w-full">
-                <Github className="h-4 w-4" />
-             </Button>
-            </a>
-            <a className="w-full" href="https://www.linkedin.com/in/mohamed-gebril-364ab72a8/" target="_blank" rel="noopener noreferrer">
-              <Button variant="ghost" size="icon" className="w-full">
-                <Linkedin className="h-4 w-4" />
-              </Button>
-            </a>
+          <a className="w-full" href="https://github.com/mohgeb" target="_blank" rel="noopener noreferrer">
+            <Button variant="ghost" size="icon" className="w-full">
+              <Github className="h-4 w-4" />
+            </Button>
+          </a>
+          <a
+            className="w-full"
+            href="https://www.linkedin.com/in/mohamed-gebril-364ab72a8/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button variant="ghost" size="icon" className="w-full">
+              <Linkedin className="h-4 w-4" />
+            </Button>
+          </a>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <div className="p-2">
-          <Badge
-            className="w-full justify-center cursor-pointer"
-            variant={isOpenToWork ? "success" : "destructive"}
+          <Button
+            className="w-full justify-center"
+            variant={isOpenToWork ? "default" : "destructive"}
             onClick={() => setIsOpenToWork(!isOpenToWork)}
           >
             {isOpenToWork ? "Open to Work" : "Not Open to Work"}
-          </Badge>
+          </Button>
         </div>
       </DropdownMenuContent>
     </DropdownMenu>
   )
 }
-

@@ -1,6 +1,4 @@
 "use client"
-
-import * as React from "react"
 import { Bell } from "lucide-react"
 
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
@@ -27,7 +25,7 @@ const notifications = [
     title: "Paper Published",
     description: "Differential CO2 Production in Yeast Fermentation: A Comparison of Maple Syrup and Sucralose",
     date: "2024-01-20",
-  }
+  },
   // Add more notifications as needed
 ]
 
@@ -60,4 +58,3 @@ export function Notifications() {
     </Popover>
   )
 }
-
